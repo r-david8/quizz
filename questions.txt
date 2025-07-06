@@ -1,0 +1,34 @@
+What is the capital of France?
+Madrid
+Berlin
+Rome
+Paris
+4
+
+Who directed the movie Inception?
+Quentin Tarantino
+Christopher Nolan
+Martin Scorsese
+Steven Spielberg
+2
+
+Which planet is known as the Red Planet?
+Venus
+Jupiter
+Mars
+Saturn
+3
+
+What is H₂O?
+Hydrogen peroxide
+Water
+Oxygen
+Salt
+2
+
+Who wrote Romeo and Juliet?
+Charles Dickens
+William Shakespeare
+Mark Twain
+Leo Tolstoy
+2
