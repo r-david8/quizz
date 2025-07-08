@@ -13,6 +13,11 @@ const totalEl = document.getElementById('total');
 const reviewEl = document.getElementById('review');
 const restartBtn = document.getElementById('restart');
 
+function getSubjectFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('subject') || 'questions.txt';
+}
+
 function parseQuestions(text) {
   const blocks = text.trim().split(/\r?\n\r?\n/);
   return blocks.map(block => {
@@ -25,8 +30,8 @@ function parseQuestions(text) {
   });
 }
 
-function loadQuestions() {
-  fetch('questions.txt')
+function loadQuestions(filename) {
+  fetch(filename)
     .then(response => response.text())
     .then(text => {
       questions = parseQuestions(text);
@@ -112,4 +117,6 @@ restartBtn.onclick = () => {
   showQuestion();
 };
 
-loadQuestions();
+// Start the quiz using subject from URL
+const subjectFile = getSubjectFromURL();
+loadQuestions(subjectFile);

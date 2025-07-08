@@ -20,7 +20,15 @@
         <div class="card shadow p-4 text-center">
           <h1 class="mb-3">Welcome to QuickQuiz!</h1>
           <p class="mb-4">Challenge yourself with fun quizzes and test your knowledge on various topics. Get instant feedback and see how you rank!</p>
-          <a href="quiz.html" class="btn btn-primary btn-lg">Start Quiz</a>
+          
+          <div class="mt-4">
+            <select id="subject-select" class="form-select mb-3">
+              <option value="questions.txt">General Knowledge</option>
+              <option value="math.txt">Math</option>
+              <option value="history.txt">History</option>
+            </select>
+            <button id="start-btn" class="btn btn-primary">Start Quiz</button>
+          </div>
         </div>
       </div>
     </div>
@@ -29,5 +37,12 @@
   <footer class="text-center mt-4 mb-2 text-muted">
     © 2025 QuickQuiz
   </footer>
+
+  <script>
+    document.getElementById('start-btn').onclick = () => {
+      const selectedFile = document.getElementById('subject-select').value;
+      window.location.href = `quiz.html?subject=${encodeURIComponent(selectedFile)}`;
+    };
+  </script>
 </body>
 </html>
